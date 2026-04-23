@@ -296,7 +296,7 @@ section {
 }
 
 .col-38 {
-    width: 38.2%;
+    width: 100%;
 }
 
 /* --------- 2.1 Header --------- */
@@ -780,11 +780,15 @@ h6 {
 
 #banner {
     background-size: cover;
+	
+
+  
 }
 
 #banner-content.row {
     padding-top: 170px;
     padding-bottom: 100px;
+	text-align: center;
 }
 
 #banner h1 {
@@ -1425,13 +1429,13 @@ blockquote {
 
 /* --------- 6.7 Pricing Table ---------- */
 
-#contact form {
+#recommendation form {
     max-width: 600px;
     margin: 0 auto;
 }
 
-#contact input,
-#contact textarea {
+#recommendation input,
+#recommendation textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
@@ -1440,7 +1444,7 @@ blockquote {
     font-size: 16px;
 }
 
-#contact textarea {
+#recommendation textarea {
     min-height: 150px;
     resize: vertical;
 	font-family: 'Poppins', sans-serif;
