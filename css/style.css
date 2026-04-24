@@ -2232,11 +2232,15 @@ blockquote {
     object-fit: cover;
     display: block;
     transition: transform 0.35s ease, opacity 0.35s ease;
+	pointer-events: none !important;  /* No clicks */
+    cursor: default !important; 
 }
 
 .travel-card:hover img {
     transform: scale(1.05);
     opacity: 0.9;
+	pointer-events: none !important;  /* No clicks */
+    cursor: default !important; 
 }
 
 .travel-card-overlay {
@@ -2247,6 +2251,7 @@ blockquote {
     justify-content: center;
 	align-items: center;
     padding: 0px; /* Smaller padding */
+
    
 }
 
