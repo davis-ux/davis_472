@@ -296,7 +296,7 @@ section {
 }
 
 .col-38 {
-    width: 38.2%;
+    width: 100%;
 }
 
 /* --------- 2.1 Header --------- */
@@ -353,7 +353,7 @@ section {
 }
 
 #logo img {
-    max-height: 22px;
+    max-height: 50px;
     vertical-align: middle;
     margin-right: 15px;
 }
@@ -390,87 +390,7 @@ section {
     border-style: solid;
 }
 
-/* Play Button */
 
-#video-section {
-    position:relative;
-}
-
-.play-video {
-    height:110px;
-    position:absolute;
-    top:50%;
-    margin-top:-110px;
-    width:100%;
-}
-
-.play-icon {
-    display: inline-block;
-    font-size: 0px;
-    cursor: pointer;
-    margin: 45px auto;
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-
-.play-icon:after {
-    pointer-events: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    content: '';
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-}
-
-.play-icon:before {
-    font-family: 'fontawesome';
-    content: '\f144';
-    speak: none;
-    font-size: 74px;
-    line-height: 110px;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    display: block;
-    -webkit-font-smoothing: antialiased;
-    color:#fff;
-}
-
-.play-video .play-icon {
-    background: rgba(255, 255, 255, 0.5);
-    -webkit-transition: -webkit-transform ease-out 0.3s, background 0.4s;
-    -moz-transition: -moz-transform ease-out 0.3s, background 0.4s;
-    transition: transform ease-out 0.3s, background 0.4s;
-}
-
-.play-video .play-icon:after {
-    top: 0;
-    left: 0;
-    padding: 0;
-    z-index: -1;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
-    opacity: 0;
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-}
-
-.play-video .play-icon:hover {
-    background: rgba(255, 255, 255, 0.05);
-    -webkit-transform: scale(0.93);
-    -moz-transform: scale(0.93);
-    -ms-transform: scale(0.93);
-    transform: scale(0.93);
-    color: #fff;
 }
 
 
@@ -779,12 +699,16 @@ h6 {
 /*------------------------------------------------------------------------------------------*/
 
 #banner {
-    background-size: cover;
+    background-size: 0;
+	
+
+  
 }
 
 #banner-content.row {
     padding-top: 170px;
     padding-bottom: 100px;
+	text-align: center;
 }
 
 #banner h1 {
@@ -910,7 +834,10 @@ h6 {
 /* --------- 6.1 Introduction ---------- */
 
 .introduction img.featured {
-    padding: 55px 0 0 0;
+    padding: 44px 0 0 0;
+
+	
+
 }
 
 /* --------- 6.2 Features ---------- */
@@ -1425,69 +1352,25 @@ blockquote {
 
 /* --------- 6.7 Pricing Table ---------- */
 
-.pricing-block-content {
-    background: #fff;
-    padding: 25px 0 25px 0;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07);
-    transition: all 0.2s ease-in-out 0s;
-    position: relative;
-    border: 10px solid #fff;
+#recommendation form {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-
-.pricing-block ul {
-    list-style: none;
-    margin: 25px 0 25px 0;
+#recommendation input,
+#recommendation textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: none;
+    font-size: 16px;
 }
 
-.pricing-block li {
-    padding: 14px 0;
-    border-bottom: 1px dotted #e1e1e1;
-}
-
-.pricing-block li:last-of-type {
-    border:none;
-}
-
-.pricing-block h3 {
-    font-size:17px;
-    text-transform:uppercase;
-    padding-bottom:0;
-}
-
-.pricing-sub {
-    font-style: italic;
-    color:#ccc;
-    margin:0 0 25px 0;
-}
-
-/*Price*/
-
-.pricing {
-    background: #f5f5f5;
-    padding: 25px;
-    position: relative;
-}
-
-.price {
-    display: inline-block;
-    font-size: 62px;
-    font-weight: 700;
-    position: relative;
-}
-
-.price span {
-    position: absolute;
-    top: 0;
-    left: -20px;
-    font-size: 22px;
-}
-
-.pricing  p {
-    font-style:italic;
-    color:#b4b4b4;
-    line-height:auto;
-    margin:0;
+#recommendation textarea {
+    min-height: 150px;
+    resize: vertical;
+	font-family: 'Poppins', sans-serif;
 }
 
 
@@ -2326,7 +2209,56 @@ blockquote {
     }
 
 }
+/* ===== TINY TRAVEL CARDS ===== */
+.travel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Tiny columns */
+    gap: 16px;
+    margin-top: 30px;
+}
 
+.travel-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    text-decoration:line-through;
+	aspect-ratio: 4 / 2;
+}
 
+.travel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
 
+.travel-card:hover img {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
 
+.travel-card-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+	align-items: center;
+    padding: 0px; /* Smaller padding */
+   
+}
+
+.travel-card-overlay h4 {
+    margin: 0;
+    font-size: 4rem;
+	opacity: 0.4;/* Smaller text */
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	text-align: center;
+	width: 100%;
+	color:#FFFFFF
+	
+}
+
+/* ===== END TINY CARDS ===== */
