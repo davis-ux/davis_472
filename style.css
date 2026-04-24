@@ -700,6 +700,10 @@ h6 {
 
 #banner {
     background-size: 0;
+	background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    min-height: 100vh !important;
 	
 
   
